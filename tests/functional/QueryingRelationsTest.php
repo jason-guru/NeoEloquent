@@ -698,7 +698,7 @@ class User extends Model {
 
     public function organization()
     {
-        return $this->belongsTo('Vinelab\NeoEloquent\Tests\Functional\QueryingRelations\Organization', 'MEMBER_OF');
+        return $this->hasOne('Vinelab\NeoEloquent\Tests\Functional\QueryingRelations\Organization', 'MEMBER_OF');
     }
 }
 
@@ -722,7 +722,7 @@ class Organization extends Model {
 
     public function members()
     {
-        return $this->hasMany('Vinelab\NeoEloquent\Tests\Functional\QueryingRelations\User', 'MEMBER_OF');
+        return $this->belongsToMany('Vinelab\NeoEloquent\Tests\Functional\QueryingRelations\User', 'MEMBER_OF');
     }
 }
 
