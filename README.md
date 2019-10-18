@@ -31,7 +31,7 @@ Add the package to your `composer.json` and run `composer update`.
 ```json
 {
     "require": {
-        "vinelab/neoeloquent": "^1.5.*"
+        "jason-guru/neo-eloquent": "^1.5.*"
     }
 }
 ```
